@@ -1,0 +1,25 @@
+Day-One - Dev Documentation
+===========================
+
+--------
+ Système de caméra
+--------
+* Chaque caméra est associé à un et un seul trigger box.
+	- Chaque caméra contient le script "Interaction". Cela permet d'interagir avec le décor à la souris.
+	- Chaque trigger box contient le script "CameraTrigger":
+		> Cam Man : La Camera Manager.
+		> Linked Camera : La caméra auquel le trigger est associé. Une et une seule.
+	- Les triggers boxes doivent être dans le layer "Ignore Raycast".
+	- Et doivent être déclarer comme "Is Trigger".
+* Toutes les caméras sont fils d'un objet parent qui est le Camera Manager.
+	- Ce dernier contient le script "CameraManager".
+	- Paramètre:
+		> Active Camera : La première caméra active au début du jeu.
+
+--------
+ Élément interactif
+--------
+* Un élément interactif est en fait un bouton qui active ou désactive un objet auquel il est associé.
+* L'élément interactif contient le script "InteracObject":
+	> Target : Objet qui est activé/désactivé par l'élément interactif.
+	> Linked Particle System : Un système de particule peut être associé.
